@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <nav style="height: 10%;width:100%;;position:fixed; display:flex;align-items:center; justify-content:space-between;padding:0px 20px;color:#40A2E3;z-index:7">
+        <div id="logo"><h1 style="font-size: 30px;"> <span> InvestED.</span> </h1></div>
+        <menu style="display: flex; align-items:center; justify-content:space-between;gap:40px">
+           <a href="/"><h4>Home</h4></a> 
+          <a href="/courses"><h4>Courses</h4></a>  
+         <a href=""> <h4>Articles</h4></a>
+       <a href="/porfile">     <h4>Profile</h4></a>
+        </menu>
+
+        <div id="logout">
+            <% if (flag === 1) { %>
+                <a href="/register">
+                  <button style="padding: 10px 20px;border-radius:10px;font-family:gilroy;background:#40A2E3;color:white">
+                    SignIN
+                  </button>
+                </a>
+              <% } else { %>
+                <a href="/logout">
+                  <button style="padding: 10px 20px;border-radius:10px;font-family:gilroy;background:#40A2E3;color:white">
+                    Logout
+                  </button>
+                </a>
+              <% } %>
+        </div>
+
+    </nav>
+<div id="main-3">
+    <div id="page1" style = "width:100%;height:100vh;padding:100px" >
+     <h1 style="font-size: 4vw;color:#0066ff"> Create a Post <i class="ri-pencil-fill"></i></h1>
+     <hr>
+     
+ <div style="height: 100%;width:100%;;display:flex;align-items:center;justify-content:center">
+     <div style="height: 100%;width:50%;display:flex;align-items: center; justify-content:center">
+
+<div id="div" style="height: 70%; width:80%;border-radius:20px;border:2px dashed #0066ff ;overflow:hidden;position:relative;z-index:0" >
+  <img id="preview" style="height: 100%; width: 100%;  object-fit:cover;position:relative;z-index:2" >
+  <div style="position: absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;color:rgba(0, 0, 0, 0.622);z-index:1"> 
+    <i class="ri-upload-cloud-line" style="font-size: 3vw
+    ;"></i>
+    <h3>Upload the Image <br>If Necessary</h3></div>
+</div>
+
+
+
+     </div>
+     <div style="height: 100%;width:50%;padding:10px">
+
+<form action="/add"  method="post" enctype="multipart/form-data">
+
+    <input type="file" hidden id="img" name="img">
+    <div class="inputGroup">
+        <input autocomplete="off" name="title" type="text" placeholder="Title" style="font-size: 1.6vw; font-family:gilroy;width:500px" >
+  </div><div class="inputGroup">
+ <textarea name="discription" class=".inputGroup" placeholder="Description" id = "description" style="resize: none;font-size:1.4vw"></textarea>
+  </div>
+ <input type="submit" style="padding: 10px 25px;border-radius:10px;font-family:gilroy;background:#40A2E3;color:white; " value="Submit">
+
+</form>
+
+
+
+     </div>
+</div>
+
+
+
+</body>
+<script>
+    var div = document.querySelector("#div");
+    var img = document.querySelector("#img");
+
+
+    div.addEventListener("click" , function()
+    {
+          img.click();
+    })
+   
+    const fileInput = document.getElementById('img');
+    const previewImage = document.getElementById('preview');
+    
+    fileInput.addEventListener('change', function() {
+        const file = fileInput.files[0];
+        if (file) {
+            const reader = new FileReader();
+            
+            reader.onload = function(e) {
+                previewImage.src = e.target.result;
+                previewImage.style.display = 'block'; // Make the image visible
+            }
+            
+            reader.readAsDataURL(file); // Read the file as a data URL for the image preview
+        } else {
+            previewImage.src = '';
+            previewImage.style.display = 'none'; // Hide the image if no file is selected
+        }
+    })
+
+
+
+</script>
+</html>

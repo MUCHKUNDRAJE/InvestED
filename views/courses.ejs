@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Document</title>
+</head>
+<style>
+    nav a{
+        color: white;
+    }
+
+    #div-collect h1{
+      font-size: 30px ;
+    }
+    #div-collect h3,h4{
+        font-size: 20px;
+    }
+</style>
+<body>
+
+    <nav style="height: 10%;width:100%;;position:fixed; display:flex;align-items:center; justify-content:space-between;padding:0px 20px;color:white;z-index:7">
+        <div id="logo"><h1 style="font-size: 30px;"> <span> InvestED.</span> </h1></div>
+        <menu style="display: flex; align-items:center; justify-content:space-between;gap:40px">
+           <a href="/"><h4>Home</h4></a> 
+          <a href="/courses"><h4>Courses</h4></a>  
+         <a href="/article"> <h4>Articles</h4></a>
+       <a href="/porfile">     <h4>Profile</h4></a>
+        </menu>
+
+        <div id="logout">
+            <% if (flag === 1) { %>
+                <a href="/register">
+                  <button style="padding: 10px 20px;border-radius:10px;font-family:gilroy;background:#40A2E3;color:white">
+                    SignIN
+                  </button>
+                </a>
+              <% } else { %>
+                <a href="/logout">
+                  <button style="padding: 10px 20px;border-radius:10px;font-family:gilroy;background:#40A2E3;color:white">
+                    Logout
+                  </button>
+                </a>
+              <% } %>  
+        </div>
+
+    </nav>
+    <div id="main-6" style="height:100vh; width:100%;background:#40A2E3;padding:100px;font-size:2vw;color:white">
+        <h1>Our Courses</h1>
+        <div id="div-collect" style="display:flex;align-items:center;justify-content:center;height:100%;gap:40px;margin-top:-20px;">
+            <div style="height: 57vh; width:45vh; background:white ;border-radius:20px;overflow:hidden">
+                <div id="up" style="height: 60%;width:100%; background: rgb(93,30,164);
+      background: linear-gradient(90deg, rgba(93,30,164,1) 0%, rgba(9,121,120,1) 35%, rgba(0,212,255,1) 100%);">
+               <div style="padding:40px 50px">
+                    <h1 style="color:white;font-size:30px " >Financial<br>Management</h1>
+                   <h1 style="font-size: 3vw;">💶</h1>
+                   </div>
+               </div>
+                <div id="down" style="text-align:center">
+                   <h3 style="color: #40A2E3;margin-top:10px;font-size: 20px;">Financial Management <br> with Robert Shiller</h3>
+                   <div style="display: flex;align-items:center;justify-content:center">
+                       <h4 style="background:#40A2E3; padding :4px 10px ;color:white;width:80%;white-space:nowrap ;margin-top:7px;border-radius:20px;font-size: 20px;"><i class="ri-bar-chart-fill"></i>Beginner to Advance</h4>
+                   </div>
+      
+                   <a href="/finance">
+                       <button style="padding: 10px 100px; margin-top :10px ;color:#40A2E3;font-family:gilroy;background:white; border :2px solid #40A2e3" > Explore </button>
+                   </a>
+                </div>
+          </div>
+          <div style="height: 57vh; width:45vh; background:white ;border-radius:20px;overflow:hidden">
+              <div id="up" style="height: 60%;width:100%;background: rgb(34,193,195);
+      background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);">
+             <div style="padding:40px 50px">
+                  <h1 style="color:white; ">Economic<br>Architecture</h1>
+                 <h1 style="font-size: 3vw;">🪙</h1>
+                 </div>
+             </div>
+             <div id="down" style="text-align:center">
+              <h3 style="color: #40A2E3;margin-top:10px;">Economic Architecture <br> with MIT</h3>
+              <div style="display: flex;align-items:center;justify-content:center">
+                  <h4 style="background:#40A2E3; padding :4px 10px ;color:white;width:80%;white-space:nowrap ;margin-top:7px;border-radius:20px;"><i class="ri-bar-chart-fill"></i>Beginner to Advance</h4>
+              </div>
+              <a href="/economic">
+                <button style="padding: 10px 100px; margin-top :10px ;color:#40A2E3;font-family:gilroy;background:white; border :2px solid #40A2e3" > Explore </button>
+            </a>  </div>
+        </div>
+        <div style="height: 57vh; width:45vh; background:white ;border-radius:20px;overflow:hidden">
+          <div id="up" style="height: 60%;width:100%;background: rgb(238,174,202);
+      background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);">
+         <div style="padding:40px 50px">
+              <h1 style="color:white; "> Basics of Trading</h1>
+             <h1 style="font-size: 3vw;"> 💹</h1>
+             </div>
+         </div>
+         <div id="down" style="text-align:center">
+          <h3 style="color: #40A2E3;margin-top:10px;">Basics of Trading <br> with  Phadke Ranade</h3>
+          <div style="display: flex;align-items:center;justify-content:center">
+              <h4 style="background:#40A2E3; padding :4px 10px ;color:white;width:80%;white-space:nowrap ;margin-top:7px;border-radius:20px;"><i class="ri-bar-chart-fill"></i>Beginner to Advance</h4>
+          </div>
+      
+          <a href="/trading">
+            <button style="padding: 10px 100px; margin-top :10px ;color:#40A2E3;font-family:gilroy;background:white; border :2px solid #40A2e3" > Explore </button>
+        </a>  </div>
+      </div>
+      <div style="height: 57vh; width:45vh; background:white ;border-radius:20px;overflow:hidden">
+          <div id="up" style="height: 60%;width:100%; background: rgb(195,155,34);
+      background: linear-gradient(0deg, rgba(195,155,34,1) 0%, rgba(237,45,253,1) 100%);">
+         <div style="padding:40px 50px">
+              <h1 style="color:white; ">Comming Soon</h1>
+          
+             </div>
+         </div>
+          <div id="down">
+            
+          </div>
+      </div>
+      </div>
+    </div>
+</body>
+</html>

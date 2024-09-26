@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+</head>
+<style>
+    body {
+        font-family: gilroy;
+    }
+    .quiz-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+    }
+    .question {
+        margin-bottom: 15px;
+    }
+    .question h3 {
+        margin-bottom: 5px;
+        color: #0066ff;
+    }
+    .options label {
+      display: block;
+        margin-bottom: 5px;
+        color: #40A2E3;
+    }
+    
+
+</style>
+<body>
+
+    <nav style="height: 10%;width:100%;;position:fixed; display:flex;align-items:center; justify-content:space-between;padding:0px 20px;color:#40A2E3;z-index:7">
+        <div id="logo"><h1 style="font-size: 30px;"> <span> InvestED.</span> </h1></div>
+        <menu style="display: flex; align-items:center; justify-content:space-between;gap:40px">
+           <a href="/"><h4>Home</h4></a> 
+          <a href="/courses"><h4>Courses</h4></a>  
+         <a href="/article"> <h4>Articles</h4></a>
+       <a href="/porfile">     <h4>Profile</h4></a>
+        </menu>
+
+        <div id="logout">
+            <% if (flag === 1) { %>
+                <a href="/register">
+                  <button style="padding: 10px 20px;border-radius:10px;font-family:gilroy;background:#40A2E3;color:white">
+                    SignIN
+                  </button>
+                </a>
+              <% } else { %>
+                <a href="/logout">
+                  <button style="padding: 10px 20px;border-radius:10px;font-family:gilroy;background:#40A2E3;color:white">
+                    Logout
+                  </button>
+                </a>
+              <% } %>
+                
+            
+            
+        
+        </div>
+
+    </nav>
+
+    <div id="main-7" style="overflow-x: hidden;">
+        <div id="page1" style="height: 100vh ; width:100% ;padding:60px;display:flex" >
+            
+          <div id="vedio" style="height:85vh;width:900px;" >
+            <div id="c-vedio" style="position: relative;z-index:0" >
+                <div class="loading-wave" style="position: absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:4">
+                    <div class="loading-bar"></div>
+                    <div class="loading-bar"></div>
+                    <div class="loading-bar"></div>
+                    <div class="loading-bar"></div>
+                  </div>
+                  
+                  <iframe width="880" height="510" src="https://www.youtube.com/embed/_OkTw766oCs?si=DDqhjhVAoyheq2OO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 20px;"></iframe>
+            </div>
+            <div id="likes" style="width: 100%;height:10vh;">
+                <div id="c-name"> 
+                    <h3>1. Introduction and Supply & Demand</h3>
+                </div>
+                 <div style="display: flex; align-items:center;gap:450px;margin-top:10px">
+                    <h2 style="padding: 10px ; background:#40A2E3;color:aliceblue"> By MIT</h2>
+                    <div id="button" style="display: flex; align-items:center;gap:20px" >
+                        <button style="padding: 10px 20px;border-radius:10px;font-family:gilroy;background:#40A2E3;color:white"> 1 likes <i class="ri-heart-line"></i> </button>
+                        <button style="padding: 10px 20px;border-radius:10px;font-family:gilroy;background:#40A2E3;color:white"> share <i class="ri-share-forward-line"></i> </button>
+                    </div>
+                 </div>
+               
+            </div>
+          </div>
+          <div id="files">
+     <h1 style="margin-left: 10px;color:#40A2E3"><i class="ri-bard-line"></i>Economic Architecture</h1>
+     <div id="collect" style="height: 100%;width:120%;margin-left:10px;padding:20px;display:flex;align-items:start;flex-direction:column;gap:10px">
+        
+    </div>
+          </div>
+        
+        
+        </div>
+     
+<div id= "page2" style="height: 100vh;width:100%;padding:120px">
+    <h3>Financial Management</h3>
+    <h1 style="font-family:gilroy">Quiz</h1>
+
+
+
+    <form id="quizForm">
+        <!-- Economics Questions -->
+        <div class="question">
+            <h3>1. What is the basic economic problem?</h3>
+            <div class="options">
+                <label><input type="radio" name="q1" value="A"> A. Inflation</label>
+                <label><input type="radio" name="q1" value="B"> B. Unemployment</label>
+                <label><input type="radio" name="q1" value="C"> C. Scarcity</label>
+                <label><input type="radio" name="q1" value="D"> D. Poverty</label>
+            </div>
+        </div>
+    
+        <div class="question">
+            <h3>2. In a market economy, who determines the prices of goods and services?</h3>
+            <div class="options">
+                <label><input type="radio" name="q2" value="A"> A. The government</label>
+                <label><input type="radio" name="q2" value="B"> B. Central banks</label>
+                <label><input type="radio" name="q2" value="C"> C. Supply and demand</label>
+                <label><input type="radio" name="q2" value="D"> D. International organizations</label>
+            </div>
+        </div>
+    
+        <div class="question">
+            <h3>3. What is the law of demand?</h3>
+            <div class="options">
+                <label><input type="radio" name="q3" value="A"> A. As the price of a good increases, demand decreases</label>
+                <label><input type="radio" name="q3" value="B"> B. As the price of a good decreases, demand decreases</label>
+                <label><input type="radio" name="q3" value="C"> C. As the price of a good increases, demand increases</label>
+                <label><input type="radio" name="q3" value="D"> D. Demand is unaffected by price changes</label>
+            </div>
+        </div>
+    
+        <div class="question">
+            <h3>4. What does GDP stand for in economics?</h3>
+            <div class="options">
+                <label><input type="radio" name="q4" value="A"> A. Gross Domestic Product</label>
+                <label><input type="radio" name="q4" value="B"> B. Government Development Plan</label>
+                <label><input type="radio" name="q4" value="C"> C. Global Development Program</label>
+                <label><input type="radio" name="q4" value="D"> D. Gross Demand Projection</label>
+            </div>
+        </div>
+    
+        <div class="question">
+            <h3>5. What is meant by "opportunity cost"?</h3>
+            <div class="options">
+                <label><input type="radio" name="q5" value="A"> A. The amount of money needed to buy a good</label>
+                <label><input type="radio" name="q5" value="B"> B. The cost of an alternative that is foregone when a decision is made</label>
+                <label><input type="radio" name="q5" value="C"> C. The total expenses of a business</label>
+                <label><input type="radio" name="q5" value="D"> D. The price of goods and services in the market</label>
+            </div>
+        </div>
+    
+        <button type="button" id="submit-btn" onclick="submitQuiz()" style="padding: 10px 20px; border-radius:10px; font-family:gilroy; background:#40A2E3; color:white;">Submit Quiz</button>
+    </form>
+    
+
+    <div id="score"></div>
+</div>
+<div id="page3" style="height:30vh;width:100%">
+    <h1 style="color:transparent;margin:20px">cdmssfm</h1>
+</div>
+
+
+
+
+</div>
+     
+          
+
+    </div>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+
+<script>
+
+    const locoScroll = new LocomotiveScroll({
+        el: document.querySelector("#main-7"),
+        smooth: true
+    });
+
+    function submitQuiz() {
+        // Correct answers
+        var correctAnswers = {
+            q1: "C",
+            q2: "C",
+            q3: "A",
+            q4: "B",
+            q5: "A"
+        };
+
+        var score = 0;
+        var totalQuestions = 5;
+
+        // Get the form data
+        var form = document.getElementById("quizForm");
+        var formData = new FormData(form);
+
+        // Check each answer
+        for (var [key, value] of formData.entries()) {
+            if (value === correctAnswers[key]) {
+                score++;
+            }
+        }
+
+        // Display the score
+        var scoreDiv = document.getElementById("score");
+        scoreDiv.innerHTML = `<h3>Your Score: ${score}/${totalQuestions}</h3>`;
+    }
+
+
+ var courses_id =[
+`1. Introduction and Supply & Demand`,
+`2. Preferences and Utility Functions`,
+`3. Budget Constraints and Constrained Choice`,
+`4. Demand Curves and Income/Substitution Effects`,
+`5. Production Theory`,
+`6. Costs`,
+`7. Competition I`,
+`8. Competition II`,
+`9. Supply and Demand & Consumer/Producer Surplus`,
+`10. Welfare Economics`,
+ ]
+
+var courses_vedio = [
+`<iframe width="880" height="510" src="https://www.youtube.com/embed/_OkTw766oCs?si=92jQB_tvtR5xWJIr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 20px;"   ></iframe >`,
+`<iframe width="880" height="510" src="https://www.youtube.com/embed/tCKk22kaZi4?si=sQda_-JeUmBDoDYM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 20px;"   ></iframe  >`,
+`<iframe width="880" height="510" src="https://www.youtube.com/embed/jHEPQpSKdbg?si=0HaQhgOZdKyolTAD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 20px;"   ></iframe  >`,
+`<iframe width="880" height="510" src="https://www.youtube.com/embed/x0scPosOsoI?si=L4Hq5xWM-kqvPNNZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 20px;"   ></iframe  >`,
+`<iframe width="880" height="510" src="https://www.youtube.com/embed/ftmvsahQ6Wo?si=LCerIK_diw9RbRwx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 20px;"   ></iframe  >`,
+`<iframe width="880" height="510" src="https://www.youtube.com/embed/TSYNHb6YBEE?si=rerwh9J7SjUHukV0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 20px;"   ></iframe  >`,
+`<iframe width="880" height="510" src="https://www.youtube.com/embed/BNy84DCRxzo?si=pKZ4gMPX1TT8ETvl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 20px;"   ></iframe  >`,
+`<iframe width="880" height="510" src="https://www.youtube.com/embed/F0ulAkrfvzo?si=XCoBiqRmzWsM0VcL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 20px;"   ></iframe  >`,
+`<iframe width="880" height="510" src="https://www.youtube.com/embed/1UtJGRojmIg?si=EuS7cuXeCwcPHIky" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 20px;"   ></iframe >`,
+`<iframe width="880" height="510" src="https://www.youtube.com/embed/PC3qooaF5Xs?si=RwSJLNpSE1Uguxup" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 20px;"   ></iframe  >`,
+]
+
+
+var collect = document.querySelector("#collect");
+
+ courses_id.forEach(function(val){
+      collect.innerHTML += ` <div class="courses" style="padding: 10px 20px;border-radius:10px;font-family:gilroy;background:#40A2E3;color:white ;width:400px;cursor:pointer" > ${val}</div> `
+ })
+
+ var courses_sts = document.querySelector("#c-vedio") ;
+
+ var collect_id = document.querySelectorAll(".courses");
+ var courses_name = document.querySelector("#c-name") 
+ collect_id.forEach(function(val,index){
+    val.addEventListener("click",function()
+    {
+        courses_name.innerHTML = ` <h3> ${courses_id[index]} </h3>`
+        courses_sts.innerHTML = ` 
+        <div style=" display:flex;align-items:center;justify-content:">
+                <div class="loading-wave" style="position: absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:4">
+                    <div class="loading-bar"></div>
+                    <div class="loading-bar"></div>
+                    <div class="loading-bar"></div>
+                    <div class="loading-bar"></div>
+                   
+                  </div>
+                  
+                </div>      
+             <h3>   ${courses_vedio[index]} </h3>`
+    })
+ })
+      
+</script>
+</html>

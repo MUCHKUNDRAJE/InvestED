@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+<link rel="stylesheet"     href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css">
+  </head>
+<body>
+    <nav style="height: 10%;width:100%;;position:fixed; display:flex;align-items:center; justify-content:space-between;padding:0px 20px;color:#40A2E3;z-index:7">
+        <div id="logo"><h1 style="font-size: 30px;"> <span> InvestED.</span> </h1></div>
+        <menu style="display: flex; align-items:center; justify-content:space-between;gap:40px">
+           <a href="/"><h4>Home</h4></a> 
+          <a href="/courses"><h4>Courses</h4></a>  
+         <a href=""> <h4>Articles</h4></a>
+       <a href="/porfile">     <h4>Profile</h4></a>
+        </menu>
+
+        <div id="logout">
+            <% if (flag === 1) { %>
+                <a href="/register">
+                  <button style="padding: 10px 20px;border-radius:10px;font-family:gilroy;background:#40A2E3;color:white">
+                    SignIN
+                  </button>
+                </a>
+              <% } else { %>
+                <a href="/logout">
+                  <button style="padding: 10px 20px;border-radius:10px;font-family:gilroy;background:#40A2E3;color:white">
+                    Logout
+                  </button>
+                </a>
+              <% } %>
+                
+            
+            
+        
+        </div>
+
+    </nav>
+
+    <div id="main-5">
+     
+        <div id="page4" style="min-height: 100vh;width:100%; display:flex ;align-items:center;justify-content:center;gap:30px;padding: 100px;
+        flex-direction:column">
+        <div> <h1 style="font-size:5vw">Articles</h1></div>
+
+        <% post.reverse().forEach(function(val){ %>
+
+          <div style="width:60%;;border:1px solid black;padding:50px 40px;border-radius:30px ">
+              
+            <div style="display: flex;align-items:center;gap:3px">
+              <div style="height: 30px ;width:30px; background:grey; border-radius:50px;overflow:hidden">
+                <img src="/images/uploads/<%=val.user.profile%>" style="height: 100%;width:100%;object-fit:cover" alt="">
+              </div>
+              <h3><%= val.user.username %></h3>
+            </div>
+
+                <h1 style="font-size:3vw"><%= val.title %></h1>
+                <pre style="white-space: pre-wrap; font-family:gilroy"><%= val.discription %></pre>
+               <div style="display: flex;align-items:center;justify-content:center;border:2px soild grey;">
+                <% if (val.post !== null) { %>
+                  <img src="images/uploads/<%= val.post %>" alt="" style="height: 60%; width: 70%; margin-top: 20px; border-radius: 30px;">
+                <% } %>
+                
+               </div>
+
+               <div id="button" style="display: flex; align-items:center;justify-content:center;gap:20px; margin-top:20px" >
+                <button style="padding: 10px 20px;border-radius:10px;font-family:gilroy;background:#40A2E3;color:white"> 1 likes <i class="ri-heart-line"></i> </button>
+                <button style="padding: 10px 20px;border-radius:10px;font-family:gilroy;background:#40A2E3;color:white"> share <i class="ri-share-forward-line"></i> </button>
+            </div>
+
+          </div>
+
+
+      <% }) %>    
+        
+ 
+
+        
+    
+    
+    
+
+
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+<script>
+  const locoScroll = new LocomotiveScroll({
+    el: document.querySelector("#main-5"),
+    smooth: true
+});
+</script>
+</html>

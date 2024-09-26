@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+</head>
+<style>
+    body {
+        font-family: gilroy;
+    }
+    .quiz-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+    }
+    .question {
+        margin-bottom: 15px;
+    }
+    .question h3 {
+        margin-bottom: 5px;
+        color: #0066ff;
+    }
+    .options label {
+      display: block;
+        margin-bottom: 5px;
+        color: #40A2E3;
+    }
+    
+
+</style>
+<body>
+
+    <nav style="height: 10%;width:100%;;position:fixed; display:flex;align-items:center; justify-content:space-between;padding:0px 20px;color:#40A2E3;z-index:7">
+        <div id="logo"><h1 style="font-size: 30px;"> <span> InvestED.</span> </h1></div>
+        <menu style="display: flex; align-items:center; justify-content:space-between;gap:40px">
+           <a href="/"><h4>Home</h4></a> 
+          <a href="/courses"><h4>Courses</h4></a>  
+         <a href="/article"> <h4>Articles</h4></a>
+       <a href="/porfile">     <h4>Profile</h4></a>
+        </menu>
+
+        <div id="logout">
+            <% if (flag === 1) { %>
+                <a href="/register">
+                  <button style="padding: 10px 20px;border-radius:10px;font-family:gilroy;background:#40A2E3;color:white">
+                    SignIN
+                  </button>
+                </a>
+              <% } else { %>
+                <a href="/logout">
+                  <button style="padding: 10px 20px;border-radius:10px;font-family:gilroy;background:#40A2E3;color:white">
+                    Logout
+                  </button>
+                </a>
+              <% } %>
+                
+            
+            
+        
+        </div>
+
+    </nav>
+
+    <div id="main-7" style="overflow-x: hidden;">
+        <div id="page1" style="height: 100vh ; width:100% ;padding:60px;display:flex" >
+            
+          <div id="vedio" style="height:85vh;width:900px;" >
+            <div id="c-vedio" style="position: relative;z-index:0" >
+                <div class="loading-wave" style="position: absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:4">
+                    <div class="loading-bar"></div>
+                    <div class="loading-bar"></div>
+                    <div class="loading-bar"></div>
+                    <div class="loading-bar"></div>
+                  </div>
+                  
+                <iframe width="880" height="510" src="https://www.youtube.com/embed/WQui_3Hpmmc?si=AYgsm3-MF1JA_MXa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 20px;z-index:5;position:relative"></iframe>
+            </div>
+            <div id="likes" style="width: 100%;height:10vh;">
+                <div id="c-name"> 
+                    <h3> 1. Introduction and What this Course Will Do for You and Your Purposes</h3>
+                </div>
+                 <div style="display: flex; align-items:center;gap:450px;margin-top:10px">
+                    <h2 style="padding: 10px ; background:#40A2E3;color:aliceblue"> By Robert Shiller</h2>
+                    <div id="button" style="display: flex; align-items:center;gap:20px" >
+                        <button style="padding: 10px 20px;border-radius:10px;font-family:gilroy;background:#40A2E3;color:white"> 1 likes <i class="ri-heart-line"></i> </button>
+                        <button style="padding: 10px 20px;border-radius:10px;font-family:gilroy;background:#40A2E3;color:white"> share <i class="ri-share-forward-line"></i> </button>
+                    </div>
+                 </div>
+               
+            </div>
+          </div>
+          <div id="files">
+     <h1 style="margin-left: 10px;color:#40A2E3"><i class="ri-bard-line"></i>Financial Management</h1>
+     <div id="collect" style="height: 100%;width:120%;margin-left:10px;padding:20px;display:flex;align-items:start;flex-direction:column;gap:10px">
+        
+    </div>
+          </div>
+        
+        
+        </div>
+     
+<div id= "page2" style="height: 100vh;width:100%;padding:120px">
+    <h3>Financial Management</h3>
+    <h1 style="font-family:gilroy">Quiz</h1>
+
+
+
+    <form id="quizForm">
+        <div class="question">
+            <h3>1. What is the primary goal of financial management?</h3>
+            <div class="options">
+                <label><input type="radio" name="q1" value="A"> A. Minimizing risk</label>
+                <label><input type="radio" name="q1" value="B"> B.  Maximizing shareholder wealth</label>
+                <label><input type="radio" name="q1" value="C"> C. Reducing expenses</label>
+                <label><input type="radio" name="q1" value="D"> D. Increasing market share</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>Which financial statement provides information about a company's assets, liabilities, and equity at a specific point in time?</h3>
+            <div class="options">
+                <label><input type="radio" name="q2" value="A"> A.  Income Statement</label>
+                <label><input type="radio" name="q2" value="B"> B. Statement of Cash Flow</label>
+                <label><input type="radio" name="q2" value="C"> C. Balance Sheet</label>
+                <label><input type="radio" name="q2" value="D"> D. Profit & Loss Statement</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>3. What does the term "liquidity" refer to in financial management?</h3>
+            <div class="options">
+                <label><input type="radio" name="q3" value="A"> A. The company's long-term debt capacity</label>
+                <label><input type="radio" name="q3" value="B"> B. The company's long-term debt capacity</label>
+                <label><input type="radio" name="q3" value="C"> C.The profitability of a company</label>
+                <label><input type="radio" name="q3" value="D"> D. The value of a company’s assets</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>4. What is the formula for calculating the current ratio?</h3>
+            <div class="options">
+                <label><input type="radio" name="q4" value="A"> A.Current Liabilities / Current Assets</label>
+                <label><input type="radio" name="q4" value="B"> B.  Current Assets / Total Liabilities</label>
+                <label><input type="radio" name="q4" value="C"> C. Current Assets / Current Liabilities</label>
+                <label><input type="radio" name="q4" value="D"> D. Total Liabilities / Equity</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>5.What is the Time Value of Money (TVM) concept?</h3>
+            <div class="options">
+                <label><input type="radio" name="q5" value="A"> A. Money loses value over time due to inflation</label>
+                <label><input type="radio" name="q5" value="B"> B. A sum of money is worth more now than the same sum in the future</label>
+                <label><input type="radio" name="q5" value="C"> C. Future money is worth more than current money</label>
+                <label><input type="radio" name="q5" value="D"> D. Time is directly proportional to the amount of money</label>
+            </div>
+        </div>
+
+        <button type="button" id="submit-btn" onclick="submitQuiz()" style="padding: 10px 20px;border-radius:10px;font-family:gilroy;background:#40A2E3;color:white">Submit Quiz</button>
+    </form>
+
+    <div id="score"></div>
+</div>
+<div id="page3" style="height:30vh;width:100%">
+    <h1 style="color:transparent;margin:20px">cdmssfm</h1>
+</div>
+
+
+
+
+</div>
+     
+          
+
+    </div>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+
+<script>
+
+    const locoScroll = new LocomotiveScroll({
+        el: document.querySelector("#main-7"),
+        smooth: true
+    });
+
+    function submitQuiz() {
+        // Correct answers
+        var correctAnswers = {
+            q1: "B",
+            q2: "C",
+            q3: "B",
+            q4: "C",
+            q5: "B"
+        };
+
+        var score = 0;
+        var totalQuestions = 5;
+
+        // Get the form data
+        var form = document.getElementById("quizForm");
+        var formData = new FormData(form);
+
+        // Check each answer
+        for (var [key, value] of formData.entries()) {
+            if (value === correctAnswers[key]) {
+                score++;
+            }
+        }
+
+        // Display the score
+        var scoreDiv = document.getElementById("score");
+        scoreDiv.innerHTML = `<h3>Your Score: ${score}/${totalQuestions}</h3>`;
+    }
+
+
+ var courses_id =[
+
+ "1. Introduction and What this Course Will Do for You and Your Purposes",
+ "2. Risk and Financial Crises",
+ "3. Technology and Invention in Finance",
+ "4. Portfolio Diversification and Supporting Financial Institutions",
+" 5. Insurance, the Archetypal Risk Management Institution, its Opportunities and Vulnerabilities",
+" 6. Guest Speaker David Swensen",
+"7. Efficient Markets",
+"8. Theory of Debt, Its Proper Role, Leverage Cycles",
+"9. Corporate Stocks",
+" 10. Real Estate"
+ ]
+
+var courses_vedio = [
+`<iframe width="880" height="510" src="https://www.youtube.com/embed/WQui_3Hpmmc?si=W5IYidWrWth0ulKx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+`<iframe width="880" height="510" src="https://www.youtube.com/embed/QbosMr2JVrc?si=_RvJIa0-bEAW-dmE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+`<iframe width="880" height="510" src="https://www.youtube.com/embed/Iij2mpilSJo?si=C4PZuUX-2IODLfkW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+`<iframe width="880" height="510" src="https://www.youtube.com/embed/_B_24GUWdSM?si=mzsYuSK6qk_jPkeL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+`<iframe width="880" height="510" src="https://www.youtube.com/embed/qfK9rCDCicE?si=30erufqnctNF30cO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+`<iframe width="880" height="510" src="https://www.youtube.com/embed/wRdx7kVNQ_E?si=jGG4xSQz8_U-CGgE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+`<iframe width="880" height="510" src="https://www.youtube.com/embed/3Ir6sbDAx4c?si=ilWVCjOFKUE4sX-X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+`<iframe width="880" height="510" src="https://www.youtube.com/embed/78_GRGjlL6E?si=wXsk2yvVMHA3Y7OR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+`<iframe width="880" height="510" src="https://www.youtube.com/embed/78_GRGjlL6E?si=4RmuqIZvgJL4Njye" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+`<iframe width="880" height="510" src="https://www.youtube.com/embed/y_IMH8erqds?si=IRi2PtEJX7HmlRVa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+]
+
+
+var collect = document.querySelector("#collect");
+
+ courses_id.forEach(function(val){
+      collect.innerHTML += ` <div class="courses" style="padding: 10px 20px;border-radius:10px;font-family:gilroy;background:#40A2E3;color:white ;width:400px;cursor:pointer" > ${val}</div> `
+ })
+
+ var courses_sts = document.querySelector("#c-vedio") ;
+
+ var collect_id = document.querySelectorAll(".courses");
+ var courses_name = document.querySelector("#c-name") 
+ collect_id.forEach(function(val,index){
+    val.addEventListener("click",function()
+    {
+        courses_name.innerHTML = ` <h3> ${courses_id[index]} </h3>`
+        courses_sts.innerHTML = ` 
+        <div style=" display:flex;align-items:center;justify-content:">
+                <div class="loading-wave" style="position: absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:4">
+                    <div class="loading-bar"></div>
+                    <div class="loading-bar"></div>
+                    <div class="loading-bar"></div>
+                    <div class="loading-bar"></div>
+                   
+                  </div>
+                  
+                </div>      
+             <h3>   ${courses_vedio[index]} </h3>`
+    })
+ })
+      
+</script>
+</html>

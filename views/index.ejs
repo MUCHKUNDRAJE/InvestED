@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Document</title>
+        <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+
+    <nav style="height: 10%;width:100%;;position:fixed; display:flex;align-items:center; justify-content:space-between;padding:0px 20px;color:#40A2E3;z-index:7">
+        <div id="logo"><h1 style="font-size: 30px;"> <span> InvestED.</span> </h1></div>
+        <menu style="display: flex; align-items:center; justify-content:space-between;gap:40px">
+           <a href="/"><h4>Home</h4></a> 
+          <a href="/courses"><h4>Courses</h4></a>  
+         <a href="/article"> <h4>Articles</h4></a>
+       <a href="/porfile">     <h4>Profile</h4></a>
+        </menu>
+
+        <div id="logout">
+            <% if (flag === 1) { %>
+                <a href="/register">
+                  <button style="padding: 10px 20px;border-radius:10px;font-family:gilroy;background:#40A2E3;color:white">
+                    SignIN
+                  </button>
+                </a>
+              <% } else { %>
+                <a href="/logout">
+                  <button style="padding: 10px 20px;border-radius:10px;font-family:gilroy;background:#40A2E3;color:white">
+                    Logout
+                  </button>
+                </a>
+              <% } %>
+                
+            
+            
+        
+        </div>
+
+    </nav>
+
+    <div id="main" style=" width:100%;z-index:0">
+     <div id="page1" style="height: 100vh; width:100%;display:flex;align-items:center;justify-content:center;position:relative;" data-scroll data-scroll-speed="-3">
+        <div style="text-align: center; "> 
+
+            <h1 style="font-size: 7vw;color:#40A2E3"> Welcome to <span style="background-color: #40A2E3;color :white;padding:0px 20px">InvestED.</span> </h1>
+            <h3 style="color: #008fee;margin-top:10px;" >Unlock the Secrets of Financial Success✏️</h3>
+
+        </div>
+        <div style="position:absolute;top:90%;left:50%;transform: translate(-50%,-50%);">
+<div id="div" style="z-index: 1;">
+    <i class="ri-arrow-down-double-line" style=" font-size:3vw;color:#008fee"></i>
+    <h3 style=" color:#008fee">scroll</h3>
+</div>
+         </div>
+     </div>
+     <div id="page2" style="height: 100vh;width:100%;background:#40A2E3 ;z-index:2;position:relative;padding:40px">
+  <h1 style="font-size:4vw ;text-transform:capitalize;color:white;margin-top:40px">our courses</h1>
+ 
+  <div id="div-collect" style="display:flex;align-items:center;justify-content:center;height:100%;gap:40px;margin-top:-20px;">
+      <div style="height: 57vh; width:45vh; background:white ;border-radius:20px;overflow:hidden">
+          <div id="up" style="height: 60%;width:100%; background: rgb(93,30,164);
+background: linear-gradient(90deg, rgba(93,30,164,1) 0%, rgba(9,121,120,1) 35%, rgba(0,212,255,1) 100%);">
+         <div style="padding:40px 50px">
+              <h1 style="color:white; ">Financial<br>Management</h1>
+             <h1 style="font-size: 3vw;">💶</h1>
+             </div>
+         </div>
+          <div id="down" style="text-align:center">
+             <h3 style="color: #40A2E3;margin-top:10px;">Financial Management <br> with Robert Shiller</h3>
+             <div style="display: flex;align-items:center;justify-content:center">
+                 <h4 style="background:#40A2E3; padding :4px 10px ;color:white;width:80%;white-space:nowrap ;margin-top:7px;border-radius:20px;"><i class="ri-bar-chart-fill"></i>Beginner to Advance</h4>
+             </div>
+<a href="/finance">
+
+    <button style="padding: 10px 100px; margin-top :10px ;color:#40A2E3;font-family:gilroy;background:white; border :2px solid #40A2e3" > Explore </button>
+</a>
+          </div>
+    </div>
+    <div style="height: 57vh; width:45vh; background:white ;border-radius:20px;overflow:hidden">
+        <div id="up" style="height: 60%;width:100%;background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);">
+       <div style="padding:40px 50px">
+            <h1 style="color:white; ">Economic<br>Architecture</h1>
+           <h1 style="font-size: 3vw;">🪙</h1>
+           </div>
+       </div>
+       <div id="down" style="text-align:center">
+        <h3 style="color: #40A2E3;margin-top:10px;">Economic Architecture <br> with MIT</h3>
+        <div style="display: flex;align-items:center;justify-content:center">
+            <h4 style="background:#40A2E3; padding :4px 10px ;color:white;width:80%;white-space:nowrap ;margin-top:7px;border-radius:20px;"><i class="ri-bar-chart-fill"></i>Beginner to Advance</h4>
+        </div>
+
+       <a href="/economic"><button style="padding: 10px 100px; margin-top :10px ;color:#40A2E3;font-family:gilroy;background:white; border :2px solid #40A2e3" > Explore </button></a> 
+     </div>
+  </div>
+  <div style="height: 57vh; width:45vh; background:white ;border-radius:20px;overflow:hidden">
+    <div id="up" style="height: 60%;width:100%;background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);">
+   <div style="padding:40px 50px">
+        <h1 style="color:white; "> Basics of Trading</h1>
+       <h1 style="font-size: 3vw;"> 💹</h1>
+       </div>
+   </div>
+   <div id="down" style="text-align:center">
+    <h3 style="color: #40A2E3;margin-top:10px;">Basics of Trading <br> with Phadke Ranade</h3>
+    <div style="display: flex;align-items:center;justify-content:center">
+        <h4 style="background:#40A2E3; padding :4px 10px ;color:white;width:80%;white-space:nowrap ;margin-top:7px;border-radius:20px;"><i class="ri-bar-chart-fill"></i>Beginner to Advance</h4>
+    </div>
+<a href="/trading">
+    <button style="padding: 10px 100px; margin-top :10px ;color:#40A2E3;font-family:gilroy;background:white; border :2px solid #40A2e3" > Explore </button>
+</a>
+ </div>
+</div>
+<div style="height: 57vh; width:45vh; background:white ;border-radius:20px;overflow:hidden">
+    <div id="up" style="height: 60%;width:100%; background: rgb(195,155,34);
+background: linear-gradient(0deg, rgba(195,155,34,1) 0%, rgba(237,45,253,1) 100%);">
+   <div style="padding:40px 50px">
+        <h1 style="color:white; ">Comming Soon</h1>
+       <h1 style="font-size: 3vw;"></h1>
+       </div>
+   </div>
+    <div id="down">
+      
+    </div>
+</div>
+</div>
+  
+    </div>
+    <div id="page3" style="height: 100vh;width:100%;background:#40A2E3">
+        <footer>
+            <div id="wrapperx" style="display: flex;align-items:center;justify-content:center">
+    
+              <div id="wrapper" style="height: 75vh;width:30%;">
+                <div id="content" style="text-align: center;margin-top:200px;color:aliceblue">
+                 <h1 > Connect with us </h1>
+                 <h3 style="margin-top:20px ;">Facebook</h3>
+                 <h3>Instagram</h3> 
+                 <h3>Twitter</h3>
+                 <h3>LinkedIn</h3>
+                 <h3>Youtube</h3>  
+                </div>
+              </div>
+              <div id="wrapper" style="height: 75vh;width:40% ;">
+                <div id="content" style="display: flex;justify-content:center;margin-top:200px">
+                   <div id="car"style="   height: 220px;
+                    width: 400px;
+                    
+                    background-color:transparant;
+                    border-radius: 20px;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;">
+                      <h1 style="font-size: 7vw;color:white">InvestED</h1>
+    
+                   </div>
+                </div>
+                <div style="display: flex;align-items:center;gap:30px;justify-content:center;margin-top:40px">
+                  <h4 style="color: white;"> ©InvestED. 2023</h4>
+                  <h4 style="color: white;">TERMS OF USE</h4>
+                  <h4 style="color: white;">PRIVACY POLICY</h4>
+                </div>             
+             </div>
+             <div id="wrapper" style="height: 75vh;width:30% ;">
+              <div id="content">
+                <div id="content" style="text-align: center;margin-top:200px;color:aliceblue">
+                  <h1> InvestED </h1>
+                  <h3 style="margin-top:20px ;">Good Things FAQs</h3>
+                  <h3>Careers</h3> 
+                  <h3>Good Food FAQs</h3>
+                  <h3>Good Places</h3>
+                  <h3> Pathways</h3>
+               
+                 
+                 </div>
+              </div>
+             </div>
+            </div>
+          <div id="wrapper-info " style="width:100%;height:30vh; text-align:center;display:flex;align-items:start;justify-content:center">
+            <p style="width:80%;color:white;text-align:center">At InvestED, we are dedicated to providing high-quality educational courses in Financial Management, Economics, and Trading. Our mission is to empower learners with the knowledge and tools they need to make informed financial decisions and excel in their careers. Whether you're a beginner or a seasoned professional, our expertly curated courses are designed to help you master the fundamentals and advance in the world of finance.</p>
+          </div>
+         </footer>
+
+
+
+
+
+
+    </div>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+crossorigin="anonymous"
+referrerpolicy="no-referrer"
+></script>
+<script src="/javascript/script.js"></script>
+<script>
+
+    const locoScroll = new LocomotiveScroll({
+        el: document.querySelector("#main"),
+        smooth: true
+    });
+    
+    // Sync ScrollTrigger with Locomotive Scroll
+    locoScroll.on("scroll", ScrollTrigger.update);
+    
+    // Setup ScrollTrigger to use LocomotiveScroll as proxy
+    ScrollTrigger.scrollerProxy("#main", {
+        scrollTop(value) {
+            return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+        },
+        getBoundingClientRect() {
+            return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+        },
+        pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
+    });
+    
+    // Refresh ScrollTrigger and LocomotiveScroll on window updates
+    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+    ScrollTrigger.refresh();
+
+    gsap.to("nav a , nav h1 ",{
+        scrollTrigger: {
+          trigger: "#page2",
+          start: "top top", 
+          end:"top bottom",
+          scroller:"#main",   
+          scrub: 1,           
+        },
+        color: "#ffffff"    ,
+        duration:0.2,   // Corrected the color value (white)
+      });
+      
+ 
+
+
+</script>
+</html>
